@@ -1,0 +1,22 @@
+<div class="card m-3 d-flex justify-content-center">
+    <form [formGroup] = "form" action="">
+        <div class="p-3">
+            <label for="exampleFormControlInput1" class="form-label color-grey">Todos los campos son obligatorios</label>
+        </div>
+        <div class="p-3">
+            <label for="exampleFormControlInput1" class="form-label color-blue">Tipo de documento</label>
+            <select class="form-select" aria-label="Seleccione el tipo de documento" formControlName="tipoDocumento" [(ngModel)]="tipoDocumento">
+                <option selected></option>
+                <option value="C">Cédula de ciudadanía</option>
+                <option value="P">Pasaporte</option>
+            </select>
+        </div>
+        <div class="p-3">
+            <label for="exampleFormControlInput1" class="form-label color-blue">Número de documento</label>
+            <input type="text" class="form-control" placeholder="23445322" [(ngModel)]="numeroDocumento" (input)="onInputChange($event)" formControlName="numeroDocumento" onkeypress="return (event.charCode >= 46 && event.charCode <= 57 && event.charCode != 47)">
+        </div>
+        <div class="p-3">
+            <button (click)="onSubmit()" [disabled]="!form.valid" type="button" class="btn btn-primary" [ngClass]="{'disabled' : !form.valid}">Buscar</button>
+        </div>
+    </form>
+</div>

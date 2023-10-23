@@ -1,0 +1,18 @@
+.card{
+    width: 18rem;
+}
+.btn-primary{
+    width: 8rem;
+}
+.btn-primary{
+    border-radius: 25px;
+}
+.color-grey{
+    color: grey;
+}
+.color-blue{
+    color: #2f26a1;
+}
+.disabled{
+    background-color: #e1d4d4;
+}

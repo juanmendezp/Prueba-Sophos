@@ -1,0 +1,11 @@
+<div *ngIf="error == ''" class="card m-3 d-flex justify-content-center p-3">
+    <h2>Información básica</h2>
+    <label for="exampleFormControlInput1" class="form-label">Primer Apellido</label>
+    <input class="form-control" id="disabledInput" type="text" placeholder="{{cliente.primerApellido}}" disabled>
+    <label for="exampleFormControlInput1" class="form-label">Primer Nombre</label>
+    <input class="form-control mb-3" id="disabledInput" type="text" placeholder="{{cliente.primerNombre}}" disabled>
+    <button (click)="volver()" type="button" class="btn btn-primary">Volver</button>
+</div>
+<div *ngIf="error != ''" class="card m-3">
+    <label>{{error}}</label>
+</div>
